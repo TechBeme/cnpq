@@ -21,64 +21,89 @@ config.read('config.ini')
 # Configurações do 2Captcha e CNPQ
 API_KEY = config['TWOCAPTCHA']['API_KEY']
 GOOGLE_KEY = config['DEFAULT']['recaptcha_key']
-JSESSIONID = config['COOKIES']['JSESSIONID']
-BIGipServerpool = config['COOKIES']['BIGipServerpool']
-
-# Configurar o cliente 2Captcha
 solver = TwoCaptcha(API_KEY)
+
+# Verificar se a pasta 'resumes' existe, se não, criar
+resumes_folder = os.path.join(os.getcwd(), 'resumes')
+os.makedirs(resumes_folder, exist_ok=True)
 
 url = 'http://buscatextual.cnpq.br/buscatextual/download.do'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.127 Safari/537.36',
 }
-cookies = {
-    'JSESSIONID': config['COOKIES']['JSESSIONID'],
-    'BIGipServerpool_buscatextual.cnpq.br': config['COOKIES']['BIGipServerpool'],
-}
 
+def fetch_cookies():
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        cookies_list = response.headers.get('Set-Cookie', '')
+        jsessionid = next((s.split('=')[1].split(';')[0] for s in cookies_list.split(', ') if s.startswith('JSESSIONID=')), None)
+        bigip_serverpool = next((s.split('=')[1].split(';')[0] for s in cookies_list.split(', ') if s.startswith('BIGipServerpool_buscatextual.cnpq.br=')), None)
+        if jsessionid and bigip_serverpool:
+            logging.info(f'Cookies obtidos com sucesso.')
+            return {'JSESSIONID': jsessionid, 'BIGipServerpool_buscatextual.cnpq.br': bigip_serverpool}
+        else:
+            raise Exception("Não foi possível obter os cookies necessários.")
+    except requests.RequestException as e:
+        raise Exception(f"Failed to fetch cookies: {e}")
+
+def Resolve_reCAPTCHA():
+    try:
+        recaptcha_result = solver.recaptcha(sitekey=GOOGLE_KEY, url=url)
+        if recaptcha_result['code']:
+            logging.info(f'Token obtido com sucesso.')
+            return recaptcha_result['code']
+        else:
+            raise Exception("Falha ao obter o token.")
+    except requests.RequestException as e:
+        raise Exception(f"Failed to Resolve reCAPTCHA: {e}")
+    
+def fetch_cnpq(idcnpq, token, cookies):
+    files = {
+        'metodo': (None, 'executarDownload'),
+        'tokenCaptchar': (None, token),
+        'idcnpq': (None, idcnpq),
+        'g-recaptcha-response': (None, token)
+    }
+    try:
+        response = requests.post(url, cookies=cookies, headers=headers, files=files)
+        response.raise_for_status()
+        if 'application/zip' in response.headers.get('Content-Type', ''):
+            logging.info(f'Resposta retornou um ZIP válido.')
+            return response.content
+        else:
+            raise Exception("Resposta não retornou um ZIP válido.")
+    except requests.RequestException as e:
+        raise Exception(f"Failed to fetch cnpq: {e}")
+    
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        idcnpq = request.form['idcnpq']
-        logging.info(f'Request feito para o idcnpq ID: {idcnpq}')
-
-        # Resolver reCAPTCHA
         try:
-            recaptcha_result = solver.recaptcha(sitekey=GOOGLE_KEY, url=url)
-            if recaptcha_result['code']:
-                logging.info(f'Token obtido com sucesso.')
-                token = recaptcha_result['code']
+            idcnpq = request.form['idcnpq']
 
-            else:
-                logging.error(f'Falha ao obter o token.')
+            # Verificar se o arquivo já existe na pasta
+            file_path = os.path.join(resumes_folder, f'{idcnpq}.xml')
+            if os.path.exists(file_path):
+                logging.info(f'Arquivo {idcnpq}.xml já existe. Retornando arquivo existente.')
+                return send_file(file_path, as_attachment=True)
+            
+            cookies = fetch_cookies()
+            token = Resolve_reCAPTCHA()
+            ZIP_file = fetch_cnpq(idcnpq, token, cookies)
+            
+            with zipfile.ZipFile(io.BytesIO(ZIP_file), 'r') as zip_ref:
+                zip_ref.extract('curriculo.xml', resumes_folder)  # Extrair apenas o curriculo.xml
 
-            # Body da requisição para fazer o download
-            files = {
-                'metodo': (None, 'executarDownload'),
-                'tokenCaptchar': (None, token),
-                'idcnpq': (None, idcnpq),
-                'g-recaptcha-response': (None, token)
-            }
-
-            # Fazer a requisição POST
-            response = requests.post(url, cookies={'JSESSIONID': JSESSIONID, 'BIGipServerpool_buscatextual.cnpq.br': BIGipServerpool},
-                                     headers=headers, files=files)
-            logging.info(f'Resposta retornou o status: {response.status_code}')
-            # Verificar se a resposta é um arquivo ZIP
-            if 'application/zip' in response.headers.get('Content-Type', ''):
-                with zipfile.ZipFile(io.BytesIO(response.content), 'r') as zip_ref:
-                    zip_ref.extract('curriculo.xml', os.getcwd())  # Extrair apenas o curriculo.xml
+                # Renomear o arquivo curriculo.xml para o nome do idcnpq
+                os.rename(os.path.join(resumes_folder, 'curriculo.xml'), os.path.join(resumes_folder, f'{idcnpq}.xml'))
+                logging.info(f"Arquivo extraído e renomeado para: '{idcnpq}.xml'.")
 
                 logging.info('Retornando o arquivo exportado...')
-                return send_file('curriculo.xml', as_attachment=True)
-
-            else:
-                logging.error('A resposta não é um arquivo ZIP válido.')
-                return 'A resposta não é um arquivo ZIP válido.'
+                return send_file(os.path.join(resumes_folder, f'{idcnpq}.xml'), as_attachment=True)
 
         except Exception as e:
-            logging.error(f'Erro ao conectar com 2Captcha: {str(e)}')
-            return f'Erro ao conectar com 2Captcha: {str(e)}'
+            return f'An unexpected error occurred: {str(e)}'
 
     return render_template('index.html')
 
