@@ -11,7 +11,7 @@
 
 [Características](#-características-principales) • [Inicio Rápido](#-inicio-rápido) • [Instalación](#-instalación) • [Configuración](#%EF%B8%8F-configuración) • [Uso](#-uso) • [Licencia](#-licencia)
 
-**Idiomas:** [🇺🇸 English](README.md) • [🇧🇷 Português](README.pt-BR.md)
+**Idiomas:** [🇺🇸 English](README.en.md) • [🇧🇷 Português](README.md)
 
 </div>
 

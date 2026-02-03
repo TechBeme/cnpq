@@ -1,90 +1,90 @@
 <div align="center">
 
-# 🎓 CNPq Lattes Curriculum Downloader
+# 🎓 Baixador de Currículo Lattes CNPq
 
-**Automated tool to download CNPq Lattes curriculum vitae with reCAPTCHA bypass**
+**Ferramenta automatizada para baixar currículos Lattes do CNPq com bypass de reCAPTCHA**
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue?logo=python)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.0+-green?logo=flask)](https://flask.palletsprojects.com/)
 [![2Captcha](https://img.shields.io/badge/2Captcha-API-orange)](https://2captcha.com/)
-[![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)
+[![Licença](https://img.shields.io/badge/Licença-Proprietária-red)](LICENSE)
 
-[Features](#-key-features) • [Quick Start](#-quick-start) • [Installation](#-installation) • [Configuration](#%EF%B8%8F-configuration) • [Usage](#-usage) • [License](#-license)
+[Funcionalidades](#-funcionalidades-principais) • [Início Rápido](#-início-rápido) • [Instalação](#-instalação) • [Configuração](#%EF%B8%8F-configuração) • [Uso](#-uso) • [Licença](#-licença)
 
-**Languages:** [🇧🇷 Português](README.pt-BR.md) • [🇪🇸 Español](README.es.md)
+**Idiomas:** [🇺🇸 English](README.en.md) • [🇪🇸 Español](README.es.md)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## 📋 Índice
 
-- [Overview](#-overview)
-- [About the Developer](#-about-the-developer)
-- [Key Features](#-key-features)
-- [Technology Stack](#%EF%B8%8F-technology-stack)
-- [Quick Start](#-quick-start)
-- [Installation](#-installation)
-- [Configuration](#%EF%B8%8F-configuration)
-- [Usage](#-usage)
-- [Service Deployment](#-service-deployment)
-- [Project Structure](#-project-structure)
-- [License](#-license)
-- [Disclaimer](#%EF%B8%8F-disclaimer)
-
----
-
-## 🎯 Overview
-
-The **CNPq Lattes Curriculum Downloader** is an automated tool designed to download curriculum vitae from the CNPq Lattes Platform. The system automatically bypasses reCAPTCHA protection using the 2Captcha service, enabling seamless and efficient curriculum extraction.
-
-**Key capabilities:**
-- Automated reCAPTCHA solving with 2Captcha integration
-- Flask web interface for easy curriculum downloads
-- Cookie management for session handling
-- Automatic XML curriculum extraction
-- Local storage system for downloaded files
-- Command-line script for batch processing
-- Systemd service support for production deployment
-
-**Perfect for:**
-- Academic researchers
-- HR departments
-- Data collection projects
-- Academic analysis
-- Research institutions
+- [Visão Geral](#-visão-geral)
+- [Sobre o Desenvolvedor](#-sobre-o-desenvolvedor)
+- [Funcionalidades Principais](#-funcionalidades-principais)
+- [Stack Tecnológico](#%EF%B8%8F-stack-tecnológico)
+- [Início Rápido](#-início-rápido)
+- [Instalação](#-instalação)
+- [Configuração](#%EF%B8%8F-configuração)
+- [Uso](#-uso)
+- [Deploy como Serviço](#-deploy-como-serviço)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Licença](#-licença)
+- [Aviso Legal](#%EF%B8%8F-aviso-legal)
 
 ---
 
-## 👨‍💻 About the Developer
+## 🎯 Visão Geral
+
+O **Baixador de Currículo Lattes CNPq** é uma ferramenta automatizada projetada para baixar currículos da Plataforma Lattes do CNPq. O sistema ignora automaticamente a proteção reCAPTCHA usando o serviço 2Captcha, permitindo extração de currículos de forma eficiente e sem interrupções.
+
+**Principais capacidades:**
+- Resolução automática de reCAPTCHA com integração 2Captcha
+- Interface web Flask para downloads fáceis de currículos
+- Gerenciamento de cookies para controle de sessão
+- Extração automática de currículos em XML
+- Sistema de armazenamento local para arquivos baixados
+- Script de linha de comando para processamento em lote
+- Suporte a serviço systemd para deploy em produção
+
+**Perfeito para:**
+- Pesquisadores acadêmicos
+- Departamentos de RH
+- Projetos de coleta de dados
+- Análise acadêmica
+- Instituições de pesquisa
+
+---
+
+## 👨‍💻 Sobre o Desenvolvedor
 
 <div align="center">
 
-**Developed by Rafael Vieira (TechBeme)**
+**Desenvolvido por Rafael Vieira (TechBeme)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-TechBeme-181717?logo=github)](https://github.com/TechBeme)
 [![Fiverr](https://img.shields.io/badge/Fiverr-Tech__Be-1DBF73?logo=fiverr)](https://www.fiverr.com/tech_be)
 [![Upwork](https://img.shields.io/badge/Upwork-Profile-14a800?logo=upwork)](https://www.upwork.com/freelancers/~01f0abcf70bbd95376)
 [![Email](https://img.shields.io/badge/Email-contact@techbe.me-EA4335?logo=gmail)](mailto:contact@techbe.me)
 
-**Full-Stack Developer & Automation Specialist**
+**Desenvolvedor Full-Stack & Especialista em Automação**
 
-Specialized in **web scraping**, **automation systems**, **bot development**, and **reCAPTCHA bypass solutions**.
+Especializado em **web scraping**, **sistemas de automação**, **desenvolvimento de bots** e **soluções de bypass de reCAPTCHA**.
 
-### 💼 Core Expertise
+### 💼 Expertise Principal
 
-- 🔍 Web Scraping & Data Extraction
-- 🤖 Bot Development & Automation
-- 🛡️ CAPTCHA Bypass Solutions
-- 💻 Full-Stack Development (Python, Flask, Next.js, React)
-- ⚡ Process Automation & Workflows
-- 📊 Data Processing & Analysis
+- 🔍 Web Scraping & Extração de Dados
+- 🤖 Desenvolvimento de Bots & Automação
+- 🛡️ Soluções de Bypass de CAPTCHA
+- 💻 Desenvolvimento Full-Stack (Python, Flask, Next.js, React)
+- ⚡ Automação de Processos & Workflows
+- 📊 Processamento & Análise de Dados
 
-### 🌍 Languages
+### 🌍 Idiomas
 
 🇺🇸 **English** • 🇧🇷 **Português** • 🇪🇸 **Español**
 
-### 📬 Contact
+### 📬 Contato
 
 **Email**: [contact@techbe.me](mailto:contact@techbe.me)
 
@@ -92,66 +92,66 @@ Specialized in **web scraping**, **automation systems**, **bot development**, an
 
 ---
 
-## ✨ Key Features
+## ✨ Funcionalidades Principais
 
-### 🔐 reCAPTCHA Bypass
-- Automatic reCAPTCHA solving using 2Captcha API
-- High success rate with reliable token generation
-- Error handling and retry mechanisms
+### 🔐 Bypass de reCAPTCHA
+- Resolução automática de reCAPTCHA usando API 2Captcha
+- Alta taxa de sucesso com geração confiável de tokens
+- Tratamento de erros e mecanismos de retry
 
-### 🌐 Web Interface
-- Clean and intuitive Flask-based web UI
-- Real-time download status
-- Form-based curriculum ID input
-- Automatic file serving
+### 🌐 Interface Web
+- Interface web limpa e intuitiva baseada em Flask
+- Status de download em tempo real
+- Entrada de ID de currículo via formulário
+- Servir arquivos automaticamente
 
-### 💾 Storage Management
-- Automatic local file storage in `resumes/` folder
-- File caching to avoid duplicate downloads
-- XML curriculum extraction from ZIP files
-- Organized file naming with Lattes ID
+### 💾 Gerenciamento de Armazenamento
+- Armazenamento automático de arquivos locais na pasta `resumes/`
+- Cache de arquivos para evitar downloads duplicados
+- Extração de currículos XML de arquivos ZIP
+- Nomenclatura organizada de arquivos com ID Lattes
 
-### 🔄 Flexible Usage
-- Web interface with Flask (`run.py`)
-- Command-line script (`cnpq.py`)
-- Alternative web UI (`render.py`)
-- Systemd service for production deployment
+### 🔄 Uso Flexível
+- Interface web com Flask (`run.py`)
+- Script de linha de comando (`cnpq.py`)
+- Interface web alternativa (`render.py`)
+- Serviço systemd para deploy em produção
 
 ### 📝 Logging
-- Comprehensive logging system
-- Debug information tracking
-- Error reporting and monitoring
+- Sistema de logging abrangente
+- Rastreamento de informações de debug
+- Relatórios de erros e monitoramento
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Stack Tecnológico
 
-| Technology | Version | Purpose |
+| Tecnologia | Versão | Propósito |
 |------------|---------|----------|
-| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | 3.7+ | Core programming language |
-| **Flask** | 3.0+ | Web framework for UI |
-| **2Captcha** | Latest | reCAPTCHA solving service |
-| **Requests** | Latest | HTTP client for web requests |
-| **Gunicorn** | Latest | WSGI HTTP server for production |
+| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | 3.7+ | Linguagem de programação principal |
+| **Flask** | 3.0+ | Framework web para interface |
+| **2Captcha** | Mais recente | Serviço de resolução de reCAPTCHA |
+| **Requests** | Mais recente | Cliente HTTP para requisições web |
+| **Gunicorn** | Mais recente | Servidor HTTP WSGI para produção |
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
 
-### Prerequisites
+### Pré-requisitos
 
-- Python 3.7 or higher
-- 2Captcha API key ([Get one here](https://2captcha.com/))
-- CNPq Lattes ID (16-digit number)
+- Python 3.7 ou superior
+- Chave API 2Captcha ([Obtenha uma aqui](https://2captcha.com/))
+- ID Lattes do CNPq (número de 16 dígitos)
 
-### 1. Clone the Repository
+### 1. Clone o Repositório
 
 ```bash
 git clone https://github.com/TechBeme/cnpq.git
 cd cnpq
 ```
 
-### 2. Install Dependencies
+### 2. Instale as Dependências
 
 ```bash
 pip install -r requirements.txt
@@ -159,55 +159,55 @@ pip install -r requirements.txt
 
 ### 3. Configure
 
-Copy `config.ini.example` to `config.ini` and add your credentials:
+Copie `config.ini.example` para `config.ini` e adicione suas credenciais:
 
 ```ini
 [DEFAULT]
 recaptcha_key = 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
 
 [TWOCAPTCHA]
-API_KEY = your_2captcha_api_key_here
+API_KEY = sua_chave_api_2captcha_aqui
 ```
 
-### 4. Run the Web Interface
+### 4. Execute a Interface Web
 
 ```bash
 python run.py
 ```
 
-Access the application at `http://localhost:5000`
+Acesse a aplicação em `http://localhost:5000`
 
 ---
 
-## 📦 Installation
+## 📦 Instalação
 
-### Option 1: Standard Installation
+### Opção 1: Instalação Padrão
 
 ```bash
-# Clone repository
+# Clone o repositório
 git clone https://github.com/TechBeme/cnpq.git
 cd cnpq
 
-# Create virtual environment (recommended)
+# Crie um ambiente virtual (recomendado)
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # No Windows: venv\Scripts\activate
 
-# Install dependencies
+# Instale as dependências
 pip install -r requirements.txt
 
 # Configure
 cp config.ini.example config.ini
-# Edit config.ini with your credentials
+# Edite config.ini com suas credenciais
 
-# Run
+# Execute
 python run.py
 ```
 
-### Option 2: Production Deployment
+### Opção 2: Deploy em Produção
 
 ```bash
-# Install and configure as above
-# Then set up systemd service
+# Instale e configure como acima
+# Então configure o serviço systemd
 
 sudo cp cnpq.service /etc/systemd/system/
 sudo systemctl daemon-reload
@@ -218,73 +218,73 @@ sudo systemctl status cnpq
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Configuração
 
 ### config.ini
 
-Create a `config.ini` file based on `config.ini.example`:
+Crie um arquivo `config.ini` baseado em `config.ini.example`:
 
 ```ini
 [DEFAULT]
-# CNPq reCAPTCHA site key (usually this one)
+# Chave do site reCAPTCHA do CNPq (geralmente esta)
 recaptcha_key = 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
 
 [TWOCAPTCHA]
-# Your 2Captcha API key
-API_KEY = your_2captcha_api_key_here
+# Sua chave API do 2Captcha
+API_KEY = sua_chave_api_2captcha_aqui
 ```
 
-### Getting Your 2Captcha API Key
+### Obtendo sua Chave API 2Captcha
 
-1. Sign up at [2Captcha](https://2captcha.com/)
-2. Navigate to your dashboard
-3. Copy your API key
-4. Paste it in the `config.ini` file
+1. Cadastre-se em [2Captcha](https://2captcha.com/)
+2. Navegue até seu painel
+3. Copie sua chave API
+4. Cole no arquivo `config.ini`
 
-### Finding Lattes IDs
+### Encontrando IDs Lattes
 
-Lattes IDs are 16-digit numbers found in CNPq Lattes curriculum URLs:
+Os IDs Lattes são números de 16 dígitos encontrados nas URLs dos currículos Lattes do CNPq:
 
 ```
 http://lattes.cnpq.br/1234567890123456
                       ^^^^^^^^^^^^^^^^
-                         Lattes ID
+                         ID Lattes
 ```
 
 ---
 
-## 🎮 Usage
+## 🎮 Uso
 
-### Web Interface (Recommended)
+### Interface Web (Recomendado)
 
-1. Start the Flask server:
+1. Inicie o servidor Flask:
    ```bash
    python run.py
    ```
 
-2. Open your browser and go to `http://localhost:5000`
+2. Abra seu navegador e vá para `http://localhost:5000`
 
-3. Enter the Lattes ID (16 digits)
+3. Digite o ID Lattes (16 dígitos)
 
-4. Click "Download"
+4. Clique em "Download"
 
-5. The XML file will be automatically downloaded
+5. O arquivo XML será baixado automaticamente
 
-**Note:** Downloaded files are stored in the `resumes/` folder with the format `{lattes_id}.xml`
+**Nota:** Os arquivos baixados são armazenados na pasta `resumes/` com o formato `{id_lattes}.xml`
 
-### Command-Line Script
+### Script de Linha de Comando
 
-For single downloads without the web interface:
+Para downloads únicos sem a interface web:
 
 ```bash
 python cnpq.py
 ```
 
-**Note:** Edit the script to set the desired Lattes ID before running.
+**Nota:** Edite o script para definir o ID Lattes desejado antes de executar.
 
-### Alternative Web Interface
+### Interface Web Alternativa
 
-A simplified version without logging or caching:
+Uma versão simplificada sem logging ou cache:
 
 ```bash
 python render.py
@@ -292,127 +292,127 @@ python render.py
 
 ---
 
-## 🚀 Service Deployment
+## 🚀 Deploy como Serviço
 
-### Systemd Service (Linux)
+### Serviço Systemd (Linux)
 
-The included `cnpq.service` file allows you to run the application as a systemd service.
+O arquivo `cnpq.service` incluído permite executar a aplicação como um serviço systemd.
 
-**Installation:**
+**Instalação:**
 
 ```bash
-# Copy service file
+# Copie o arquivo de serviço
 sudo cp cnpq.service /etc/systemd/system/
 
-# Update paths in the service file if needed
+# Atualize os caminhos no arquivo de serviço se necessário
 sudo nano /etc/systemd/system/cnpq.service
 
-# Reload systemd
+# Recarregue o systemd
 sudo systemctl daemon-reload
 
-# Enable service (start on boot)
+# Habilite o serviço (iniciar no boot)
 sudo systemctl enable cnpq
 
-# Start service
+# Inicie o serviço
 sudo systemctl start cnpq
 
-# Check status
+# Verifique o status
 sudo systemctl status cnpq
 ```
 
-**Management Commands:**
+**Comandos de Gerenciamento:**
 
 ```bash
-# Start
+# Iniciar
 sudo systemctl start cnpq
 
-# Stop
+# Parar
 sudo systemctl stop cnpq
 
-# Restart
+# Reiniciar
 sudo systemctl restart cnpq
 
-# View logs
+# Ver logs
 sudo journalctl -u cnpq -f
 ```
 
 ---
 
-## 📁 Project Structure
+## 📁 Estrutura do Projeto
 
 ```
 cnpq/
-├── cnpq.py               # Command-line script
-├── run.py                # Main Flask application with logging
-├── render.py             # Alternative Flask application
-├── config.ini.example    # Configuration template
-├── config.ini            # Your configuration (gitignored)
-├── cnpq.service          # Systemd service file
-├── requirements.txt      # Python dependencies
+├── cnpq.py               # Script de linha de comando
+├── run.py                # Aplicação Flask principal com logging
+├── render.py             # Aplicação Flask alternativa
+├── config.ini.example    # Template de configuração
+├── config.ini            # Sua configuração (ignorada pelo git)
+├── cnpq.service          # Arquivo de serviço systemd
+├── requirements.txt      # Dependências Python
 ├── templates/
-│   └── index.html        # Web interface template
-├── resumes/              # Downloaded curriculum files
-└── cnpq.log              # Application logs
+│   └── index.html        # Template da interface web
+├── resumes/              # Arquivos de currículo baixados
+└── cnpq.log              # Logs da aplicação
 ```
 
 ---
 
-## 📝 License
+## 📝 Licença
 
-**Proprietary License - All Rights Reserved**
+**Licença Proprietária - Todos os Direitos Reservados**
 
 Copyright © 2026 Rafael Vieira (TechBeme)
 
-### ❌ Restrictions
+### ❌ Restrições
 
-- **No commercial use** without explicit permission
-- **No modifications** or derivative works
-- **No distribution** or sublicensing
-- **No reverse engineering**
-- **No public hosting** without authorization
+- **Sem uso comercial** sem permissão explícita
+- **Sem modificações** ou trabalhos derivados
+- **Sem distribuição** ou sublicenciamento
+- **Sem engenharia reversa**
+- **Sem hospedagem pública** sem autorização
 
-### ✅ Permitted Use
+### ✅ Uso Permitido
 
-- View source code for educational purposes
-- Run for personal, non-commercial research use
-- Fork for personal study only (not for distribution)
+- Visualizar código-fonte para fins educacionais
+- Executar para uso pessoal e de pesquisa não comercial
+- Fork para estudo pessoal apenas (não para distribuição)
 
-### 📧 Commercial Licensing
+### 📧 Licenciamento Comercial
 
-For commercial use, white-label solutions, or custom development:
+Para uso comercial, soluções white-label ou desenvolvimento personalizado:
 
-**Contact:** [contact@techbe.me](mailto:contact@techbe.me)
-
----
-
-## ⚠️ Disclaimer
-
-This tool is provided for **educational and research purposes only**.
-
-- This project is **independent** and **NOT affiliated** with CNPq or the Brazilian government
-- Users are responsible for compliance with CNPq's Terms of Service
-- Only collects publicly available data
-- Built-in rate limiting to respect server resources
-- Users must comply with applicable data protection laws (LGPD, GDPR, etc.)
-- The developer is not responsible for misuse of this tool
-
-**Use responsibly and ethically.**
+**Contato:** [contact@techbe.me](mailto:contact@techbe.me)
 
 ---
 
-## 🙏 Acknowledgments
+## ⚠️ Aviso Legal
 
-Built with:
-- [Flask](https://flask.palletsprojects.com/) - Web framework
-- [2Captcha](https://2captcha.com/) - reCAPTCHA solving service
-- [Requests](https://requests.readthedocs.io/) - HTTP library
-- [Gunicorn](https://gunicorn.org/) - WSGI HTTP server
+Esta ferramenta é fornecida **apenas para fins educacionais e de pesquisa**.
+
+- Este projeto é **independente** e **NÃO afiliado** ao CNPq ou ao governo brasileiro
+- Os usuários são responsáveis pela conformidade com os Termos de Serviço do CNPq
+- Coleta apenas dados publicamente disponíveis
+- Limitação de taxa integrada para respeitar recursos do servidor
+- Os usuários devem cumprir as leis de proteção de dados aplicáveis (LGPD, GDPR, etc.)
+- O desenvolvedor não é responsável pelo uso indevido desta ferramenta
+
+**Use com responsabilidade e ética.**
+
+---
+
+## 🙏 Agradecimentos
+
+Construído com:
+- [Flask](https://flask.palletsprojects.com/) - Framework web
+- [2Captcha](https://2captcha.com/) - Serviço de resolução de reCAPTCHA
+- [Requests](https://requests.readthedocs.io/) - Biblioteca HTTP
+- [Gunicorn](https://gunicorn.org/) - Servidor HTTP WSGI
 
 ---
 
 <div align="center">
 
-**Developed by [Rafael Vieira](https://github.com/TechBeme)**
+**Desenvolvido por [Rafael Vieira](https://github.com/TechBeme)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-TechBeme-181717?logo=github)](https://github.com/TechBeme)
 [![Fiverr](https://img.shields.io/badge/Fiverr-Tech__Be-1DBF73?logo=fiverr)](https://www.fiverr.com/tech_be)
