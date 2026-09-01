@@ -20,7 +20,6 @@
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [About the Developer](#-about-the-developer)
 - [Key Features](#-key-features)
 - [Technology Stack](#%EF%B8%8F-technology-stack)
 - [Quick Start](#-quick-start)
@@ -53,42 +52,6 @@ The **CNPq Lattes Curriculum Downloader** is an automated tool designed to downl
 - Data collection projects
 - Academic analysis
 - Research institutions
-
----
-
-## 👨‍💻 About the Developer
-
-<div align="center">
-
-**Developed by Rafael Vieira (TechBeme)**
-
-[![GitHub](https://img.shields.io/badge/GitHub-TechBeme-181717?logo=github)](https://github.com/TechBeme)
-[![Fiverr](https://img.shields.io/badge/Fiverr-Tech__Be-1DBF73?logo=fiverr)](https://www.fiverr.com/tech_be)
-[![Upwork](https://img.shields.io/badge/Upwork-Profile-14a800?logo=upwork)](https://www.upwork.com/freelancers/~01f0abcf70bbd95376)
-[![Email](https://img.shields.io/badge/Email-contact@techbe.me-EA4335?logo=gmail)](mailto:contact@techbe.me)
-
-**Full-Stack Developer & Automation Specialist**
-
-Specialized in **web scraping**, **automation systems**, **bot development**, and **reCAPTCHA bypass solutions**.
-
-### 💼 Core Expertise
-
-- 🔍 Web Scraping & Data Extraction
-- 🤖 Bot Development & Automation
-- 🛡️ CAPTCHA Bypass Solutions
-- 💻 Full-Stack Development (Python, Flask, Next.js, React)
-- ⚡ Process Automation & Workflows
-- 📊 Data Processing & Analysis
-
-### 🌍 Languages
-
-🇺🇸 **English** • 🇧🇷 **Português** • 🇪🇸 **Español**
-
-### 📬 Contact
-
-**Email**: [contact@techbe.me](mailto:contact@techbe.me)
-
-</div>
 
 ---
 

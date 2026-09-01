@@ -20,7 +20,6 @@
 ## 📋 Índice
 
 - [Visão Geral](#-visão-geral)
-- [Sobre o Desenvolvedor](#-sobre-o-desenvolvedor)
 - [Funcionalidades Principais](#-funcionalidades-principais)
 - [Stack Tecnológico](#%EF%B8%8F-stack-tecnológico)
 - [Início Rápido](#-início-rápido)
@@ -53,42 +52,6 @@ O **Baixador de Currículo Lattes CNPq** é uma ferramenta automatizada projetad
 - Projetos de coleta de dados
 - Análise acadêmica
 - Instituições de pesquisa
-
----
-
-## 👨‍💻 Sobre o Desenvolvedor
-
-<div align="center">
-
-**Desenvolvido por Rafael Vieira (TechBeme)**
-
-[![GitHub](https://img.shields.io/badge/GitHub-TechBeme-181717?logo=github)](https://github.com/TechBeme)
-[![Fiverr](https://img.shields.io/badge/Fiverr-Tech__Be-1DBF73?logo=fiverr)](https://www.fiverr.com/tech_be)
-[![Upwork](https://img.shields.io/badge/Upwork-Profile-14a800?logo=upwork)](https://www.upwork.com/freelancers/~01f0abcf70bbd95376)
-[![Email](https://img.shields.io/badge/Email-contact@techbe.me-EA4335?logo=gmail)](mailto:contact@techbe.me)
-
-**Desenvolvedor Full-Stack & Especialista em Automação**
-
-Especializado em **web scraping**, **sistemas de automação**, **desenvolvimento de bots** e **soluções de bypass de reCAPTCHA**.
-
-### 💼 Expertise Principal
-
-- 🔍 Web Scraping & Extração de Dados
-- 🤖 Desenvolvimento de Bots & Automação
-- 🛡️ Soluções de Bypass de CAPTCHA
-- 💻 Desenvolvimento Full-Stack (Python, Flask, Next.js, React)
-- ⚡ Automação de Processos & Workflows
-- 📊 Processamento & Análise de Dados
-
-### 🌍 Idiomas
-
-🇺🇸 **English** • 🇧🇷 **Português** • 🇪🇸 **Español**
-
-### 📬 Contato
-
-**Email**: [contact@techbe.me](mailto:contact@techbe.me)
-
-</div>
 
 ---
 
