@@ -363,16 +363,6 @@ Esta ferramenta é fornecida **apenas para fins educacionais e de pesquisa**.
 
 ---
 
-## 🙏 Agradecimentos
-
-Construído com:
-- [Flask](https://flask.palletsprojects.com/) - Framework web
-- [2Captcha](https://2captcha.com/) - Serviço de resolução de reCAPTCHA
-- [Requests](https://requests.readthedocs.io/) - Biblioteca HTTP
-- [Gunicorn](https://gunicorn.org/) - Servidor HTTP WSGI
-
----
-
 <div align="center">
 
 **Desenvolvido por [Rafael Vieira](https://github.com/TechBeme)**

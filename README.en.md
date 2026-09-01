@@ -363,16 +363,6 @@ This tool is provided for **educational and research purposes only**.
 
 ---
 
-## 🙏 Acknowledgments
-
-Built with:
-- [Flask](https://flask.palletsprojects.com/) - Web framework
-- [2Captcha](https://2captcha.com/) - reCAPTCHA solving service
-- [Requests](https://requests.readthedocs.io/) - HTTP library
-- [Gunicorn](https://gunicorn.org/) - WSGI HTTP server
-
----
-
 <div align="center">
 
 **Developed by [Rafael Vieira](https://github.com/TechBeme)**
