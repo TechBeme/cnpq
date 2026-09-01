@@ -20,7 +20,6 @@
 ## 📋 Índice
 
 - [Descripción General](#-descripción-general)
-- [Sobre el Desarrollador](#-sobre-el-desarrollador)
 - [Características Principales](#-características-principales)
 - [Stack Tecnológico](#%EF%B8%8F-stack-tecnológico)
 - [Inicio Rápido](#-inicio-rápido)
@@ -36,59 +35,23 @@
 
 ## 🎯 Descripción General
 
-El **Descargador de Currículum Lattes CNPq** es una herramienta automatizada diseñada para descargar currículums vitae de la Plataforma Lattes de CNPq. El sistema evita automáticamente la protección reCAPTCHA utilizando el servicio 2Captcha, permitiendo una extracción de currículums eficiente y sin interrupciones.
+El **Descargador de Currículum Lattes CNPq** es una herramienta automatizada diseñada para descargar currículums vitae de la Plataforma Lattes de CNPq. El sistema evita automáticamente la protección reCAPTCHA utilizando el servicio 2Captcha, permitiendo descargar el currículum después de resolver el desafío.
 
 **Capacidades principales:**
 - Resolución automática de reCAPTCHA con integración 2Captcha
-- Interfaz web Flask para descargas fáciles de currículums
+- Formulario Flask para ingresar el identificador del currículum Lattes
 - Gestión de cookies para control de sesiones
 - Extracción automática de currículums en XML
 - Sistema de almacenamiento local para archivos descargados
 - Script de línea de comandos para procesamiento por lotes
 - Soporte de servicio systemd para despliegue en producción
 
-**Perfecto para:**
+**Casos de uso:**
 - Investigadores académicos
 - Departamentos de RRHH
 - Proyectos de recopilación de datos
 - Análisis académico
 - Instituciones de investigación
-
----
-
-## 👨‍💻 Sobre el Desarrollador
-
-<div align="center">
-
-**Desarrollado por Rafael Vieira (TechBeme)**
-
-[![GitHub](https://img.shields.io/badge/GitHub-TechBeme-181717?logo=github)](https://github.com/TechBeme)
-[![Fiverr](https://img.shields.io/badge/Fiverr-Tech__Be-1DBF73?logo=fiverr)](https://www.fiverr.com/tech_be)
-[![Upwork](https://img.shields.io/badge/Upwork-Profile-14a800?logo=upwork)](https://www.upwork.com/freelancers/~01f0abcf70bbd95376)
-[![Email](https://img.shields.io/badge/Email-contact@techbe.me-EA4335?logo=gmail)](mailto:contact@techbe.me)
-
-**Desarrollador Full-Stack & Especialista en Automatización**
-
-Especializado en **web scraping**, **sistemas de automatización**, **desarrollo de bots** y **soluciones de bypass de reCAPTCHA**.
-
-### 💼 Experiencia Principal
-
-- 🔍 Web Scraping & Extracción de Datos
-- 🤖 Desarrollo de Bots & Automatización
-- 🛡️ Soluciones de Bypass de CAPTCHA
-- 💻 Desarrollo Full-Stack (Python, Flask, Next.js, React)
-- ⚡ Automatización de Procesos & Flujos de Trabajo
-- 📊 Procesamiento & Análisis de Datos
-
-### 🌍 Idiomas
-
-🇺🇸 **English** • 🇧🇷 **Português** • 🇪🇸 **Español**
-
-### 📬 Contacto
-
-**Email**: [contact@techbe.me](mailto:contact@techbe.me)
-
-</div>
 
 ---
 
@@ -100,7 +63,7 @@ Especializado en **web scraping**, **sistemas de automatización**, **desarrollo
 - Manejo de errores y mecanismos de reintento
 
 ### 🌐 Interfaz Web
-- Interfaz web limpia e intuitiva basada en Flask
+- Formulario Flask para ingresar el identificador del currículum Lattes
 - Estado de descarga en tiempo real
 - Entrada de ID de currículum mediante formulario
 - Servir archivos automáticamente
@@ -111,7 +74,7 @@ Especializado en **web scraping**, **sistemas de automatización**, **desarrollo
 - Extracción de currículums XML de archivos ZIP
 - Nomenclatura organizada de archivos con ID Lattes
 
-### 🔄 Uso Flexible
+### 🔄 Modos de Uso
 - Interfaz web con Flask (`run.py`)
 - Script de línea de comandos (`cnpq.py`)
 - Interfaz web alternativa (`render.py`)
@@ -397,16 +360,6 @@ Esta herramienta se proporciona **únicamente con fines educativos y de investig
 - El desarrollador no es responsable del mal uso de esta herramienta
 
 **Use con responsabilidad y ética.**
-
----
-
-## 🙏 Agradecimientos
-
-Construido con:
-- [Flask](https://flask.palletsprojects.com/) - Framework web
-- [2Captcha](https://2captcha.com/) - Servicio de resolución de reCAPTCHA
-- [Requests](https://requests.readthedocs.io/) - Biblioteca HTTP
-- [Gunicorn](https://gunicorn.org/) - Servidor HTTP WSGI
 
 ---
 

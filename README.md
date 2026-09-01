@@ -35,7 +35,7 @@
 
 ## 🎯 Visão Geral
 
-O **Baixador de Currículo Lattes CNPq** é uma ferramenta automatizada projetada para baixar currículos da Plataforma Lattes do CNPq. O sistema ignora automaticamente a proteção reCAPTCHA usando o serviço 2Captcha, permitindo extração de currículos de forma eficiente e sem interrupções.
+O **Baixador de Currículo Lattes CNPq** é uma ferramenta automatizada projetada para baixar currículos da Plataforma Lattes do CNPq. O sistema ignora automaticamente a proteção reCAPTCHA usando o serviço 2Captcha, permitindo baixar o currículo depois que o desafio é resolvido.
 
 **Principais capacidades:**
 - Resolução automática de reCAPTCHA com integração 2Captcha
@@ -46,7 +46,7 @@ O **Baixador de Currículo Lattes CNPq** é uma ferramenta automatizada projetad
 - Script de linha de comando para processamento em lote
 - Suporte a serviço systemd para deploy em produção
 
-**Perfeito para:**
+**Casos de uso:**
 - Pesquisadores acadêmicos
 - Departamentos de RH
 - Projetos de coleta de dados
@@ -59,11 +59,11 @@ O **Baixador de Currículo Lattes CNPq** é uma ferramenta automatizada projetad
 
 ### 🔐 Bypass de reCAPTCHA
 - Resolução automática de reCAPTCHA usando API 2Captcha
-- Alta taxa de sucesso com geração confiável de tokens
+- Retry quando o 2Captcha não retorna um token aceito
 - Tratamento de erros e mecanismos de retry
 
 ### 🌐 Interface Web
-- Interface web limpa e intuitiva baseada em Flask
+- Formulário Flask para informar o identificador do currículo Lattes
 - Status de download em tempo real
 - Entrada de ID de currículo via formulário
 - Servir arquivos automaticamente
@@ -74,7 +74,7 @@ O **Baixador de Currículo Lattes CNPq** é uma ferramenta automatizada projetad
 - Extração de currículos XML de arquivos ZIP
 - Nomenclatura organizada de arquivos com ID Lattes
 
-### 🔄 Uso Flexível
+### 🔄 Modos de Uso
 - Interface web com Flask (`run.py`)
 - Script de linha de comando (`cnpq.py`)
 - Interface web alternativa (`render.py`)

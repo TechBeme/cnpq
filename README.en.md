@@ -35,18 +35,18 @@
 
 ## 🎯 Overview
 
-The **CNPq Lattes Curriculum Downloader** is an automated tool designed to download curriculum vitae from the CNPq Lattes Platform. The system automatically bypasses reCAPTCHA protection using the 2Captcha service, enabling seamless and efficient curriculum extraction.
+The **CNPq Lattes Curriculum Downloader** is an automated tool designed to download curriculum vitae from the CNPq Lattes Platform. The system automatically bypasses reCAPTCHA protection using the 2Captcha service, allowing the curriculum download after the challenge is solved.
 
 **Key capabilities:**
 - Automated reCAPTCHA solving with 2Captcha integration
-- Flask web interface for easy curriculum downloads
+- Flask form for entering a Lattes curriculum ID
 - Cookie management for session handling
 - Automatic XML curriculum extraction
 - Local storage system for downloaded files
 - Command-line script for batch processing
 - Systemd service support for production deployment
 
-**Perfect for:**
+**Use cases:**
 - Academic researchers
 - HR departments
 - Data collection projects
@@ -59,11 +59,11 @@ The **CNPq Lattes Curriculum Downloader** is an automated tool designed to downl
 
 ### 🔐 reCAPTCHA Bypass
 - Automatic reCAPTCHA solving using 2Captcha API
-- High success rate with reliable token generation
+- Retries when 2Captcha does not return an accepted token
 - Error handling and retry mechanisms
 
 ### 🌐 Web Interface
-- Clean and intuitive Flask-based web UI
+- Flask form for entering a Lattes curriculum ID
 - Real-time download status
 - Form-based curriculum ID input
 - Automatic file serving
@@ -74,14 +74,14 @@ The **CNPq Lattes Curriculum Downloader** is an automated tool designed to downl
 - XML curriculum extraction from ZIP files
 - Organized file naming with Lattes ID
 
-### 🔄 Flexible Usage
+### 🔄 Usage Modes
 - Web interface with Flask (`run.py`)
 - Command-line script (`cnpq.py`)
 - Alternative web UI (`render.py`)
 - Systemd service for production deployment
 
 ### 📝 Logging
-- Comprehensive logging system
+- Logs for download status, debug details, and errors
 - Debug information tracking
 - Error reporting and monitoring
 
